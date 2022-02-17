@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false,
+    "outDir": "./dist",
+    "allowJs": true
+  },
+  "exclude": ["./templates", "./dist", "./test"]
+}
