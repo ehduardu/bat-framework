@@ -2,7 +2,6 @@ const path = require('path')
 const fs = require('fs')
 
 const copyRecursiveSync = (src, dest) => {
-  // const exists = fs.existsSync(src);
   const stats = fs.statSync(src);
   const isDirectory = stats.isDirectory();
   if (isDirectory) {

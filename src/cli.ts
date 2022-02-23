@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 import path from 'path';
-import { createProject } from './creators/create-project';
+import { createProject } from './actions/create-project';
 import capitalize from './tools/capitalize';
 import { Entities } from './tools/entity';
 

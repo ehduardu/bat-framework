@@ -9,4 +9,4 @@ This project uses enuchi's excellent [React-Google-Apps-Script](https://github.c
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-To the extent possible under law, Carlos Eduardo has waived all copyright and related or neighboring rights to this work.
+To the extent possible under law, Dudu Code has waived all copyright and related or neighboring rights to this work.
