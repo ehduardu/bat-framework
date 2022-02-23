@@ -1,9 +1,12 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
 import path from 'path';
+import fs from 'fs';
+
 import { createProject } from './actions/create-project';
 import capitalize from './tools/capitalize';
 import { Entities } from './tools/entity';
+
 
 const cli = new Command()
   .name("bat-framework");
@@ -13,7 +16,13 @@ cli
   .description('creates a new apps script project')
   .action((projectName) => {
     const isDev = process.env.NODE_ENV === "development"
-    const rootDir = isDev ? path.resolve('.', 'test') : path.resolve('.');
+    const rootDir = isDev ? path.resolve(`./${projectName}`, 'test') : path.resolve(`./${projectName}`);
+
+    if (!fs.existsSync(rootDir)) {
+      fs.mkdirSync(rootDir, {
+        recursive: true
+      });
+    }
 
     try {
       createProject({ appPath: rootDir, appName: projectName });

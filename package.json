@@ -1,6 +1,6 @@
 {
   "name": "@ehduardu/bat-framework",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "A simple framework for Google Apps Script",
   "main": "dist/src/cli.js",
   "scripts": {
@@ -14,7 +14,14 @@
   "bin": {
     "bat-framework": "dist/src/cli.js"
   },
-  "keywords": [],
+  "keywords": [
+    "Apps",
+    "Script",
+    "web-app",
+    "GAS",
+    "react",
+    "google-apps-script"
+  ],
   "author": "Dudu Code",
   "license": "MIT",
   "repository": "https://github.com/ehduardu/bat-framework",
