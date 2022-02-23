@@ -15,8 +15,8 @@
     "bat-framework": "dist/src/cli.js"
   },
   "keywords": [],
-  "author": "Ehduardu",
-  "license": "ISC",
+  "author": "Dudu Code",
+  "license": "MIT",
   "repository": "https://github.com/ehduardu/bat-framework",
   "dependencies": {
     "chalk": "^4.1.0",
