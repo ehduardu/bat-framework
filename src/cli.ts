@@ -37,22 +37,5 @@ cli
   .description('creates a new apps script API')
   .action(async (projectName: string) => await createApi({ projectName }))
 
-cli
-  .command('create [entityType] [name]')
-  .description(`creates a new entity of type ${Entities.map(e => capitalize(e.toLowerCase())).join(' or ')}`)
-  .action((entityType, name) => {
-    if (entityType === 'function') {
-      // create new function
-    } else {
-      console.log('not implemented yet')
-    }
-  });
-
-cli
-  .command('entityTypes')
-  .description(`list all entity types`)
-  .action(() => {
-    Entities.map(e => console.log(capitalize(e.toLowerCase())))
-  });
 
 cli.parse(process.argv);
