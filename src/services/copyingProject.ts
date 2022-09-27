@@ -69,9 +69,14 @@ export default class CopyingProjectService {
       "@google/clasp@2.3.0",
     ], true);
 
+    console.log('Initializing git...');
     const gitInitialized = gitInit(appPath);
     if (gitInitialized) {
       console.log('Git repository initialized\n');
+    } else {
+      console.log(`${chalk.yellow('Attention!')} ${chalk.redBright('git repository it not initialized!')}`);
+      console.log('Inside that directory, you need to run this commands:\n');
+      console.log(chalk.cyan('   git init'));
     }
 
     console.log(`${chalk.green('Success!')} Created ${projectName} at ${chalk.cyan(appPath)}\n`);
@@ -85,12 +90,6 @@ export default class CopyingProjectService {
     console.log('    Builds the app and push to gas server.\n');
     console.log('We suggest that you begin by typing:\n');
     console.log(`   ${chalk.cyan('yarn login\n')}`);
-
-    if (!gitInitialized) {
-      console.log(`${chalk.yellow('Attention!')} ${chalk.redBright('git repository it not initialized!')}`);
-      console.log('Inside that directory, you need to run this commands:\n');
-      console.log(chalk.cyan('   git init'));
-    }
   }
 
 }
