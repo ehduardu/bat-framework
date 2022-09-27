@@ -1,0 +1,3 @@
+interface createApi {
+  projectName: string;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "gas-api-base-project",
+  "version": "1.0.0",
+  "description": "Starter project to build a API with Google Apps Script",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ehduardu/gas-api-base-project"
+  },
+  "scripts": {
+    "test": "test",
+    "login": "clasp login",
+    "setup:use-id": "clasp setting scriptId",
+    "build": "webpack --mode production",
+    "deploy": "npm run build && npx clasp push"
+  },
+  "keywords": [
+    "react",
+    "google",
+    "apps",
+    "script",
+    "sheets"
+  ],
+  "author": "Carlos Eduardo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.55"
+  },
+  "devDependencies": {
+    "@google/clasp": "2.3.0"
+  }
+}
