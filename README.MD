@@ -25,3 +25,9 @@ The following command starts a new GAS Web App with React.
 ```sh
 bat-framework init <projectName>
 ```
+
+To create a REST API with GAS use the following command.
+
+```sh
+bat-framework init-api <projectName>
+```
