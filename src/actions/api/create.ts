@@ -2,14 +2,13 @@ import chalk from 'chalk';
 import path from 'path';
 
 import logger from '../../tools/logger';
-import { getResolvedPath } from '../../utils/getPath';
+import { getResolvedPath } from '../../tools/path';
 import CopyingProjectService from '../../services/copyingProject';
 
 
 export async function createApi({ projectName }: createApi) {
   try {
     const appPath = getResolvedPath(projectName);
-    const root = path.resolve(appPath);
 
     if (!projectName) {
       logger.error(chalk.blueBright("argument projectName not specified!"));
@@ -18,8 +17,6 @@ export async function createApi({ projectName }: createApi) {
 
     const copyingProject = new CopyingProjectService();
     copyingProject.execute({ projectName, appPath, templateType: 'api' })
-    
-    console.log('dale doly', projectName)
   } catch (error) {
     console.log('Could not create a new apps script project. Please try again', error);
   }
